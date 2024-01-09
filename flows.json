@@ -1,0 +1,700 @@
+[
+    {
+        "id": "f356e43be5552f2a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "846f92f89271d337",
+        "type": "mqtt in",
+        "z": "f356e43be5552f2a",
+        "name": "",
+        "topic": "/ThinkIOT/temp",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f57c1878339fd29b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 740,
+        "y": 500,
+        "wires": [
+            [
+                "1f9fc93cc7b2c477",
+                "2cc98967380a6185",
+                "16101e5fb4f0857f",
+                "e71d4df2f94f6b5a",
+                "576ccdb32feb74b0",
+                "1cdbb9e185e39c93",
+                "24283db864f01a7e",
+                "3b87a5e6566a0e9a",
+                "ec4b977a0fdee0f6",
+                "f6e7a8600d79b6d9",
+                "ec5da82cf3c7ba44",
+                "9a5dc951ab5cbddb"
+            ]
+        ]
+    },
+    {
+        "id": "27ea55d95623f366",
+        "type": "mqtt in",
+        "z": "f356e43be5552f2a",
+        "name": "",
+        "topic": "/ThinkIOT/hum",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "f57c1878339fd29b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 720,
+        "y": 640,
+        "wires": [
+            [
+                "45552341099c1bea",
+                "6bfba2c2dd510f7e",
+                "4ebb64dc607b9047",
+                "41ea747e40c7ad77",
+                "9353a2ae6c6bfd26",
+                "2d73066ce6c31628",
+                "bf50597b04b5b4de",
+                "fd059ba1045fbce6",
+                "e78c239d1f21c12b"
+            ]
+        ]
+    },
+    {
+        "id": "ae05d57d8e1360e8",
+        "type": "debug",
+        "z": "f356e43be5552f2a",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "1f9fc93cc7b2c477",
+        "type": "ui_gauge",
+        "z": "f356e43be5552f2a",
+        "name": "",
+        "group": "2e60262bbf18029a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "grados",
+        "format": "{{value}}",
+        "min": "10",
+        "max": "38",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 530,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "45552341099c1bea",
+        "type": "ui_gauge",
+        "z": "f356e43be5552f2a",
+        "name": "",
+        "group": "98482b8f7a902d2b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humedad",
+        "label": "grados",
+        "format": "{{value}}",
+        "min": "50",
+        "max": "90",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 500,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2cc98967380a6185",
+        "type": "ui_chart",
+        "z": "f356e43be5552f2a",
+        "name": "",
+        "group": "2e60262bbf18029a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "12",
+        "ymax": "40",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 530,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6bfba2c2dd510f7e",
+        "type": "ui_chart",
+        "z": "f356e43be5552f2a",
+        "name": "",
+        "group": "98482b8f7a902d2b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Humedad",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "40",
+        "ymax": "100",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "x": 500,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4de9013295e86ab1",
+        "type": "file",
+        "z": "f356e43be5552f2a",
+        "name": "",
+        "filename": "C:\\Users\\Hayler\\Documents\\ApruebaNodeRed\\Datos.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1250,
+        "y": 740,
+        "wires": [
+            [
+                "ae05d57d8e1360e8"
+            ]
+        ],
+        "outputLabels": [
+            "Temperatura"
+        ]
+    },
+    {
+        "id": "16101e5fb4f0857f",
+        "type": "function",
+        "z": "f356e43be5552f2a",
+        "name": "function 1",
+        "func": "// Obtén la temperatura del mensaje MQTT\nvar temperatura = msg.payload;\n\n// Obtén la hora actual\nvar fechaActual = new Date();\nvar horaActual = fechaActual.toLocaleTimeString();\n\n// Crea el mensaje que incluye la temperatura y la hora\nvar mensajeCompleto = \"\\n//////////////////////\"+\"\\nTEMPERATURA:\"+ \"\\nTime: \" + horaActual + \"\\nStatus: \" + temperatura + \"°C\";\n\n// Actualiza el mensaje con el nuevo formato\nmsg.payload = mensajeCompleto;\n\n// Devuelve el mensaje modificado\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 680,
+        "wires": [
+            [
+                "4de9013295e86ab1"
+            ]
+        ]
+    },
+    {
+        "id": "4ebb64dc607b9047",
+        "type": "function",
+        "z": "f356e43be5552f2a",
+        "name": "function 2",
+        "func": "// Obtén la humedad del mensaje MQTT\nvar humedad = msg.payload;\n\n// Obtén la hora actual\nvar fechaActual = new Date();\nvar horaActual = fechaActual.toLocaleTimeString();\n\n// Crea el mensaje que incluye la humedad y la hora con un salto de línea\nvar mensajeCompleto = \"\\nHUMEDAD \"+\"\\nTime: \" + horaActual + \"\\nStatus: \" + humedad + \"%\"+\"\\n\\n[Captura exitosa! :)]\"+\"\\n----------------------\";\n\n// Actualiza el mensaje con el nuevo formato\nmsg.payload = mensajeCompleto;\n\n// Devuelve el mensaje modificado\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 720,
+        "wires": [
+            [
+                "4de9013295e86ab1"
+            ]
+        ]
+    },
+    {
+        "id": "ec5da82cf3c7ba44",
+        "type": "function",
+        "z": "f356e43be5552f2a",
+        "name": "function carnes",
+        "func": "// Obtén la temperatura del mensaje MQTT\nvar temperatura = msg.payload;\n\n// Obtén la hora actual\nvar fechaActual = new Date();\nvar horaActual = fechaActual.toLocaleTimeString();\n\n// Definir umbrales de advertencia para Carnes y Pescados\nvar umbralMin = 15;\nvar umbralMax = 18;\n\n// Verificar si la temperatura está dentro del rango de advertencia\nif (temperatura >= umbralMin && temperatura <= umbralMax) {\n    // Crear mensaje de advertencia\n    var mensajeAdvertencia = \"Temperatura: \" + temperatura+\" °C\"+\"      Time: \"+horaActual+ \"\\n\\n¡Advertencia! \"+\"\\nCondiciones críticas para Carnes y Pescados\";\n\n    // Agregar el mensaje al blog de notas (utiliza nodos específicos para tu blog de notas)\n\n    // Agregar el mensaje al campo \"message\" del objeto msg\n    msg.message = mensajeAdvertencia;\n\n    // Devolver el mensaje para continuar el flujo\n    return msg;\n}\n// Si no se cumple la condición específica, simplemente devuelve el mensaje original\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 460,
+        "wires": [
+            [
+                "4fe1ec862f95e828"
+            ]
+        ]
+    },
+    {
+        "id": "4fe1ec862f95e828",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "f356e43be5552f2a",
+        "name": "",
+        "credtype": "account",
+        "account": "f5297b8245e4d9aa",
+        "text": "message",
+        "phonenumbervalue": "",
+        "apikeyvalue": "",
+        "apikeyinputtypemessage": "msg",
+        "phonenumberinputtypemessage": "msg",
+        "inputtypemessage": "msg",
+        "rejectssl": false,
+        "x": 1420,
+        "y": 480,
+        "wires": [
+            [
+                "af1205f794c5ee3d"
+            ]
+        ]
+    },
+    {
+        "id": "bf50597b04b5b4de",
+        "type": "function",
+        "z": "f356e43be5552f2a",
+        "name": "function baja",
+        "func": "// Obtén el valor de humedad del mensaje MQTT\nvar humedad = msg.payload;\n\n// Definir umbral de advertencia bajo para humedad\nvar umbralAdvertenciaBajoMin = 0;\nvar umbralAdvertenciaBajoMax = 44;\n\n// Verificar si la humedad está dentro del rango de advertencia bajo\nif (humedad >= umbralAdvertenciaBajoMin && humedad <= umbralAdvertenciaBajoMax) {\n    // Crear mensaje de advertencia de humedad baja\n    msg.message = \"Humedad: \" + humedad + \"%\"  + \"\\n\\n¡Advertencia! \" + \"\\nHumedad baja. Se recomienda ajustar las condiciones\";\n\n    // Agregar el mensaje al blog de notas (utiliza nodos específicos para tu blog de notas)\n\n    // Devolver el mensaje para continuar el flujo\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 620,
+        "wires": [
+            [
+                "4fe1ec862f95e828"
+            ]
+        ]
+    },
+    {
+        "id": "af1205f794c5ee3d",
+        "type": "debug",
+        "z": "f356e43be5552f2a",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "9a5dc951ab5cbddb",
+        "type": "function",
+        "z": "f356e43be5552f2a",
+        "name": "function lacteos",
+        "func": "// Obtén la temperatura del mensaje MQTT\nvar temperatura = msg.payload;\n\n// Obtén la hora actual\nvar fechaActual = new Date();\nvar horaActual = fechaActual.toLocaleTimeString();\n\n// Definir umbrales de advertencia para Lácteos\nvar umbralMin = 19;\nvar umbralMax = 23;\n\n// Verificar si la temperatura está dentro del rango de advertencia para Lácteos\nif (temperatura >= umbralMin && temperatura <= umbralMax) {\n    // Crear mensaje de advertencia para Lácteos\n    var mensajeAdvertencia = \"Temperatura: \" + temperatura + \" °C\" + \"      Time: \" + horaActual + \"\\n\\n¡Advertencia! \" + \"\\nCondiciones críticas para Lácteos\"+\"\\n_*Se recomienda refrigerar*_\";\n\n    // Agregar el mensaje al blog de notas (utiliza nodos específicos para tu blog de notas)\n\n    // Agregar el mensaje al campo \"message\" del objeto msg\n    msg.message = mensajeAdvertencia;\n\n    // Devolver el mensaje para continuar el flujo\n    return msg;\n}\n// Si no se cumple la condición específica, simplemente devuelve el mensaje original\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 420,
+        "wires": [
+            [
+                "4fe1ec862f95e828"
+            ]
+        ]
+    },
+    {
+        "id": "ec4b977a0fdee0f6",
+        "type": "function",
+        "z": "f356e43be5552f2a",
+        "name": "function verduras",
+        "func": "// Obtén la temperatura del mensaje MQTT\nvar temperatura = msg.payload;\n\n// Obtén la hora actual\nvar fechaActual = new Date();\nvar horaActual = fechaActual.toLocaleTimeString();\n\n// Definir umbrales de advertencia para Verduras\nvar umbralMin = 24;\nvar umbralMax = 26;\n\n// Verificar si la temperatura está dentro del rango de advertencia para Verduras\nif (temperatura >= umbralMin && temperatura <= umbralMax) {\n    // Crear mensaje de advertencia para Verduras\n    var mensajeAdvertencia = \"Temperatura: \" + temperatura + \" °C\" + \"      Time: \" + horaActual + \"\\n\\n¡Advertencia! \" + \"\\nCondiciones críticas para Verduras\";\n\n    // Agregar el mensaje al blog de notas (utiliza nodos específicos para tu blog de notas)\n\n    // Agregar el mensaje al campo \"message\" del objeto msg\n    msg.message = mensajeAdvertencia;\n\n    // Devolver el mensaje para continuar el flujo\n    return msg;\n}\n// Si no se cumple la condición específica, simplemente devuelve el mensaje original\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 380,
+        "wires": [
+            [
+                "4fe1ec862f95e828"
+            ]
+        ]
+    },
+    {
+        "id": "f6e7a8600d79b6d9",
+        "type": "function",
+        "z": "f356e43be5552f2a",
+        "name": "function frutas",
+        "func": "// Obtén la temperatura del mensaje MQTT\nvar temperatura = msg.payload;\n\n// Obtén la hora actual\nvar fechaActual = new Date();\nvar horaActual = fechaActual.toLocaleTimeString();\n\n// Definir umbrales de advertencia para Frutas Frescas\nvar umbralMin = 27;\nvar umbralMax = 30;\n\n// Verificar si la temperatura está dentro del rango de advertencia para Frutas Frescas\nif (temperatura >= umbralMin && temperatura <= umbralMax) {\n    // Crear mensaje de advertencia para Frutas Frescas\n    var mensajeAdvertencia = \"Temperatura: \" + temperatura + \" °C\" + \"      Time: \" + horaActual + \"\\n\\n¡Advertencia! \" + \"\\nCondiciones críticas para Frutas Frescas\";\n\n    // Agregar el mensaje al blog de notas (utiliza nodos específicos para tu blog de notas)\n\n    // Agregar el mensaje al campo \"message\" del objeto msg\n    msg.message = mensajeAdvertencia;\n\n    // Devolver el mensaje para continuar el flujo\n    return msg;\n}\n// Si no se cumple la condición específica, simplemente devuelve el mensaje original\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 340,
+        "wires": [
+            [
+                "4fe1ec862f95e828"
+            ]
+        ]
+    },
+    {
+        "id": "fd059ba1045fbce6",
+        "type": "function",
+        "z": "f356e43be5552f2a",
+        "name": "function optimo",
+        "func": "// Obtén el valor de humedad del mensaje MQTT\nvar humedad = msg.payload;\n\n// Definir umbral de humedad óptimo\nvar umbralOptimoMin = 45;\nvar umbralOptimoMax = 75;\n\n// Verificar si la humedad está dentro del rango óptimo\nif (humedad >= umbralOptimoMin && humedad <= umbralOptimoMax) {\n    // Crear mensaje de humedad óptima\n    msg.message = \"Humedad: \" + humedad + \"%\" + \"\\n\\n¡Óptimo! \" + \"\\nCondiciones ideales de humedad\";\n\n    // Agregar el mensaje al blog de notas (utiliza nodos específicos para tu blog de notas)\n\n    // Devolver el mensaje para continuar el flujo\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 580,
+        "wires": [
+            [
+                "4fe1ec862f95e828"
+            ]
+        ]
+    },
+    {
+        "id": "e78c239d1f21c12b",
+        "type": "function",
+        "z": "f356e43be5552f2a",
+        "name": "function alta",
+        "func": "// Obtén el valor de humedad del mensaje MQTT\nvar humedad = msg.payload;\n\n// Definir umbral de advertencia alto para humedad\nvar umbralAdvertenciaAltoMin = 76;\nvar umbralAdvertenciaAltoMax = 100;\n\n// Verificar si la humedad está dentro del rango de advertencia alto\nif (humedad >= umbralAdvertenciaAltoMin && humedad <= umbralAdvertenciaAltoMax) {\n    // Crear mensaje de advertencia de humedad alta\n    msg.message = \"Humedad: \" + humedad + \"%\" + \"\\n\\n¡Advertencia! \" + \"\\nHumedad alta. Se recomienda ajustar las condiciones\";\n\n    // Agregar el mensaje al blog de notas (utiliza nodos específicos para tu blog de notas)\n\n    // Devolver el mensaje para continuar el flujo\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1110,
+        "y": 540,
+        "wires": [
+            [
+                "4fe1ec862f95e828"
+            ]
+        ]
+    },
+    {
+        "id": "e71d4df2f94f6b5a",
+        "type": "ui_text",
+        "z": "f356e43be5552f2a",
+        "group": "f0ca71aa5c856494",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Umbral de Advertencia de Temperatura(°C)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 790,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "576ccdb32feb74b0",
+        "type": "ui_text",
+        "z": "f356e43be5552f2a",
+        "group": "f0ca71aa5c856494",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Carnes y Pescados:\t15-18 °C",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 830,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1cdbb9e185e39c93",
+        "type": "ui_text",
+        "z": "f356e43be5552f2a",
+        "group": "f0ca71aa5c856494",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Lácteos:\t 19-23 °C",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 870,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "24283db864f01a7e",
+        "type": "ui_text",
+        "z": "f356e43be5552f2a",
+        "group": "f0ca71aa5c856494",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Verduras: \t24-26 °C",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 870,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "3b87a5e6566a0e9a",
+        "type": "ui_text",
+        "z": "f356e43be5552f2a",
+        "group": "f0ca71aa5c856494",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Frutas Frescas:\t27-30 °C",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 850,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "41ea747e40c7ad77",
+        "type": "ui_text",
+        "z": "f356e43be5552f2a",
+        "group": "3e1b3ebb7dd9ab8e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Umbral de Advertencia Bajo:   0-44%",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 820,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "9353a2ae6c6bfd26",
+        "type": "ui_text",
+        "z": "f356e43be5552f2a",
+        "group": "3e1b3ebb7dd9ab8e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Valor Óptimo:   45-75%",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 800,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "2d73066ce6c31628",
+        "type": "ui_text",
+        "z": "f356e43be5552f2a",
+        "group": "3e1b3ebb7dd9ab8e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Umbral de Advertencia Alto:   76-100%",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 810,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "a4867896e5b04f07",
+        "type": "ui_spacer",
+        "z": "f356e43be5552f2a",
+        "name": "spacer",
+        "group": "",
+        "order": 2,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "e6aa9babe5aa64a4",
+        "type": "ui_spacer",
+        "z": "f356e43be5552f2a",
+        "name": "spacer",
+        "group": "",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "f57c1878339fd29b",
+        "type": "mqtt-broker",
+        "name": "mqtt",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2e60262bbf18029a",
+        "type": "ui_group",
+        "name": "Temperatura",
+        "tab": "161b26ed0186a52a",
+        "order": 2,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "98482b8f7a902d2b",
+        "type": "ui_group",
+        "name": "Humedad",
+        "tab": "161b26ed0186a52a",
+        "order": 3,
+        "disp": true,
+        "width": "5",
+        "collapse": false
+    },
+    {
+        "id": "f5297b8245e4d9aa",
+        "type": "node-red-contrib-whatsapp-cmb-account",
+        "name": "SensorBot4"
+    },
+    {
+        "id": "f0ca71aa5c856494",
+        "type": "ui_group",
+        "name": "Datos Temperatura",
+        "tab": "161b26ed0186a52a",
+        "order": 1,
+        "disp": true,
+        "width": "3",
+        "collapse": false
+    },
+    {
+        "id": "3e1b3ebb7dd9ab8e",
+        "type": "ui_group",
+        "name": "Datos Humedad",
+        "tab": "161b26ed0186a52a",
+        "order": 4,
+        "disp": true,
+        "width": "4",
+        "collapse": false
+    },
+    {
+        "id": "161b26ed0186a52a",
+        "type": "ui_tab",
+        "name": "Monitoreo",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
